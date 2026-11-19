@@ -1,0 +1,10 @@
+.instruction-suggestions { margin-top: 12px; }
+.generation-instructions .instruction-suggestions > p { margin: 0 0 8px; color: #323335; font-size: 11px; font-weight: 650; }
+.instruction-suggestions p span { margin-left: 6px; color: var(--graphite); font-weight: 400; }
+.instruction-suggestion-list { display: flex; flex-wrap: wrap; gap: 7px; }
+.instruction-suggestion-list button { display: inline-flex; align-items: center; gap: 5px; padding: 7px 10px; border: 1px solid #37383a30; border-radius: 20px; background: #f9fafc; color: #323335; font: inherit; font-size: 11px; cursor: pointer; text-align: left; line-height: 1.4; }
+.instruction-suggestion-list button:hover:not(:disabled) { background: #ebecee; border-color: #37383a70; }
+.instruction-suggestion-list button:focus-visible { outline: 2px solid #37383a80; outline-offset: 2px; }
+.instruction-suggestion-list button:disabled { cursor: default; opacity: .55; }
+.instruction-suggestion-list button.added { background: #edeef0; border-color: transparent; color: #535456; opacity: 1; }
+.suggestion-added-label { font-size: 9px; opacity: .75; }

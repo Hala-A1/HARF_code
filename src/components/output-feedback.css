@@ -1,0 +1,16 @@
+.output-feedback { margin-top: 12px; color: #5c5d5f; font-size: 12px; }
+.output-feedback-actions { display: flex; align-items: center; gap: 7px; }
+.output-feedback-actions button { display: grid; place-items: center; width: 34px; height: 34px; padding: 0; border: 1px solid rgba(50, 55, 65, .2); border-radius: 9px; background: #fff; color: #656668; cursor: pointer; }
+.output-feedback-actions button:hover, .output-feedback-actions button[aria-pressed="true"] { color: #3d3e40; border-color: #666769; background: #f3f4f6; }
+.output-feedback-actions button:focus-visible { outline: 2px solid #3d3e40; outline-offset: 3px; }
+.output-feedback-actions button:disabled { opacity: .5; cursor: wait; }
+.output-feedback-actions > span { margin-left: 5px; font-size: 11px; }
+.output-feedback-form { display: grid; gap: 9px; max-width: 640px; margin-top: 10px; padding: 14px; border: 1px solid rgba(50, 55, 65, .2); border-radius: 10px; background: var(--theme-page); }
+.output-feedback-form label { display: grid; gap: 7px; font-size: 12px; font-weight: 650; }
+.output-feedback-form label > span { font-size: 10px; color: #616264; }
+.output-feedback-form textarea { width: 100%; min-height: 80px; resize: vertical; box-sizing: border-box; border: 1px solid #cacbcd; border-radius: 7px; padding: 10px; font: inherit; background: #fff; color: #2c2d2f; }
+.output-feedback-form > div { display: flex; gap: 8px; }
+.output-feedback-form button { padding: 8px 12px; border: 1px solid #c3c4c6; border-radius: 7px; background: #fff; color: #37383a; font: inherit; cursor: pointer; }
+.output-feedback-form button[type="submit"] { background: #3d3e40; border-color: #3d3e40; color: #fff; }
+.output-feedback-form button:disabled { opacity: .45; cursor: not-allowed; }
+.output-feedback-error { color: #a62a38; }

@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+openai>=1.50.0
+python-dotenv
+pydantic
+python-multipart
+pypdf
+pypdfium2>=4.30,<6
+Pillow>=11,<13
+python-docx
+
+openpyxl>=3.1.5,<4
+httpx>=0.27,<1
+ldap3>=2.9.1,<3
+oracledb>=3,<4
+psutil>=7.2,<8
+tiktoken>=0.14,<1

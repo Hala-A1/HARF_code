@@ -1,0 +1,53 @@
+.inference-models { padding: 24px; color: #293647; }
+.inference-models h2 { font-size: 20px; margin: 0 0 8px; }
+.inference-models h3 { font-size: 14px; margin: 0 0 7px; }
+.inference-models p, .inference-models small { color: #566475; font-size: 12px; line-height: 1.6; }
+.inference-models > header, .inference-inventory-heading, .inference-models footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.inference-models > header > svg { color: #b00000; }
+.inference-connections, .inference-defaults { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 22px 0 12px; }
+.inference-connections article { display: flex; gap: 13px; padding: 18px; background: #f5f7f9; border: 1px solid #dde3e9; border-radius: 12px; min-width: 0; }
+.inference-connections article > svg { color: #af0000; flex-shrink: 0; }
+.inference-connections article div { display: grid; gap: 5px; min-width: 0; }
+.inference-connections span { font-size: 12px; }
+.inference-connections code { font-size: 10px; overflow-wrap: anywhere; color: #526071; }
+.inference-models label { display: grid; gap: 7px; font-size: 12px; font-weight: 600; min-width: 0; }
+.inference-models label > span { display: flex; align-items: center; gap: 6px; }
+.inference-models input:not([type=checkbox]), .inference-models select { width: 100%; min-width: 0; background: #fff; color: #293647; border: 1px solid #bdc7d2; border-radius: 8px; font: inherit; padding: 10px; box-sizing: border-box; }
+.inference-models label small { font-weight: 400; }
+.inference-channel-settings { margin: 20px 0; border: 1px solid #dde3e9; border-radius: 10px; padding: 15px; }
+.inference-channel-settings summary { cursor: pointer; font-size: 13px; font-weight: 600; }
+.inference-channel-settings > div { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); padding-top: 16px; }
+.inference-inventory-heading { margin: 24px 0 12px; }
+.inference-inventory-heading span { color: #566475; font-size: 11px; }
+.inference-inventory { display: grid; gap: 12px; margin-bottom: 14px; }
+.inference-inventory article { border: 1px solid #dde3e9; border-radius: 11px; padding: 17px; }
+.inference-model-fields { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.inference-tabs { display: flex; gap: 6px; padding: 5px; margin: 22px 0; background: #f2f3f5; border: 1px solid var(--theme-border, #ddd); border-radius: 12px; overflow-x: auto; }
+.inference-models .inference-tabs [role="tab"] { flex: 1 0 auto; border: 1px solid transparent; color: #4b515d; background: transparent; padding: 12px 16px; font-weight: 600; white-space: nowrap; }
+.inference-models .inference-tabs [aria-selected="true"] { background: white; color: #a80016; border-color: #d5c4c8; box-shadow: 0 2px 5px #252a3210; }
+.inference-tab-panel[hidden] { display: none !important; }
+.inference-sections { border: 0; margin: 0; padding: 0; min-width: 0; }
+.inference-token-limits { display: grid; gap: 14px; margin: 20px 0; }
+.inference-token-limits article { border: 1px solid var(--theme-border, #ddd); border-inline-start: 3px solid #af0016; padding: 18px; border-radius: 12px; background: #fafbfc; }
+.inference-token-limits article header { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.inference-token-limits article header span { color: #566475; font-size: 11px; }
+.inference-token-limits article > div { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.inference-token-method { padding: 14px; border: 1px solid #dde3e9; border-radius: 10px; font-size: 12px; }
+.inference-token-method summary { font-weight: 600; cursor: pointer; }
+.inference-connection-tests { display: grid; gap: 10px; margin-top: 16px; }
+.inference-connection-tests > div { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px; border: 1px solid #dde3e9; border-radius: 10px; }
+.inference-connection-tests span { display: grid; gap: 6px; font-size: 12px; }
+@media(max-width:600px) { .inference-token-limits article > div { grid-template-columns: 1fr; }.inference-models .inference-tabs [role="tab"] { padding: 10px 12px; }.inference-connection-tests > div { flex-wrap: wrap; } }
+.inference-model-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 15px; }
+.inference-model-actions label { display: flex; align-items: center; gap: 7px; font-weight: 400; }
+.inference-model-actions input { accent-color: #b00000; }
+.inference-models button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; border: 1px solid #d4dce5; border-radius: 8px; padding: 9px 13px; background: white; color: #ac0000; font: inherit; font-size: 12px; cursor: pointer; }
+.inference-models button:disabled { opacity: .5; cursor: default; }
+.inference-models footer { margin-top: 20px; padding-top: 16px; border-top: 1px solid #dde3e9; font-size: 12px; }
+.inference-models footer > div { display: flex; gap: 8px; }
+.inference-models button.primary-button { color: #fff; background: var(--action-burgundy,#d90000); }
+.inference-models .inference-error { color: #aa0000; }
+.inference-models .inference-success { color: #286044; }
+.inference-models :focus-visible { outline: 2px solid #b00000; outline-offset: 3px; }
+@media(max-width:1000px) { .inference-model-fields { grid-template-columns: 1fr 1fr; } }
+@media(max-width:600px) { .inference-models { padding: 16px; } .inference-connections, .inference-defaults, .inference-model-fields { grid-template-columns: 1fr; } .inference-models > header, .inference-inventory-heading, .inference-models footer { align-items: start; flex-direction: column; } }

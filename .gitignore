@@ -1,0 +1,53 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+.venv/
+__pycache__/
+*.py[cod]
+dist
+dist-ssr
+*.local
+
+# Generated application output
+generated_image.png
+backend/access-control.json
+backend/feedback.sqlite3*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Disposable local diagnostics and document-conversion intermediates
+/tmp/
+# Local persistent instruction history (back up with the application data).
+instruction-versions.sqlite3*
+request-limits.sqlite3*
+
+# Database credentials and private migration backups (contain user content).
+backend/oracle.local.env
+/backups/
+
+# Private configuration and generated review artifacts
+.env
+**/.env
+/output/
+/reports/
+
+# Per-minute LLM runtime settings and local rolling usage
+backend/llm-rate.local.env
+llm-rate-limits.sqlite3*
+backend/platform-policy.local.env

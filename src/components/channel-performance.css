@@ -1,0 +1,50 @@
+.channel-performance { padding: 26px; border: 1px solid var(--theme-border, #ddd); border-top: 3px solid var(--action-burgundy, #d90000); border-radius: 18px; background: linear-gradient(135deg, #f4f5f7, #fff 65%); margin-bottom: 22px; color: #252a32; }
+.performance-heading, .performance-controls, .performance-chart-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.performance-eyebrow { display: inline-flex; gap: 7px; align-items: center; color: #b90000; font-size: 12px; font-weight: 700; }
+.channel-performance h2 { font-size: 25px; margin: 8px 0; letter-spacing: -.5px; }
+.channel-performance h3 { font-size: 16px; margin: 0 0 5px; }
+.channel-performance p { font-size: 12px; color: #525c69; line-height: 1.6; margin: 5px 0; }
+.performance-controls label { font-size: 11px; display: grid; gap: 5px; }
+.channel-performance select, .channel-performance input { color: #252a32; background: #fff; border: 1px solid #c9cdd3; border-radius: 8px; padding: 9px; font: inherit; font-size: 12px; }
+.performance-controls button { background: #fff; color: #b90000; padding: 10px; border: 1px solid #c9cdd3; border-radius: 9px; align-self: end; display: flex; }
+.performance-period { display: flex; justify-content: space-between; margin: 22px 0 12px; font-size: 11px; color: #59616c; }
+.performance-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
+.performance-kpis article { background: #fff; border: 1px solid #e1e3e7; border-radius: 13px; padding: 18px; display: flex; flex-direction: column; gap: 9px; min-width: 0; }
+.performance-kpi-icon { color: #c40000; width: 33px; height: 33px; background: #faf1f0; border-radius: 9px; display: grid; place-items: center; }
+.performance-kpis article > span:not(.performance-kpi-icon) { font-size: 12px; color: #535d6a; }
+.performance-kpis strong { font-size: 29px; line-height: 1.15; overflow-wrap: anywhere; }
+.performance-kpis small { color: #626a76; font-size: 11px; line-height: 1.5; }
+.performance-charts { display: grid; grid-template-columns: 1.2fr 1fr; gap: 16px; }
+.performance-card { background: #fff; border: 1px solid #e1e3e7; border-radius: 13px; padding: 20px; min-width: 0; }
+.performance-chart-heading { align-items: start; }
+.performance-chart-heading > strong { color: #b90000; font-size: 23px; white-space: nowrap; }
+.performance-chart-heading small { color: #626a76; font-size: 11px; }
+.performance-chart-heading select { max-width: 145px; }
+.performance-daily { height: 170px; display: flex; align-items: end; gap: 3px; border-bottom: 1px solid #dadee4; margin-top: 22px; background: repeating-linear-gradient(to top, transparent, transparent 41px, #f0f1f4 42px); }
+.performance-daily button { height: 100%; flex: 1; min-width: 0; border: 0; padding: 0; display: flex; align-items: end; background: transparent; cursor: pointer; }
+.performance-daily button span { width: 100%; height: max(3px, var(--bar-height)); background: #b8bec7; border-radius: 4px 4px 0 0; transition: background .15s; }
+.performance-daily button:hover span, .performance-daily button.active span, .performance-daily button:focus-visible span { background: #d90000; }
+.performance-axis { display: flex; justify-content: space-between; font-size: 10px; color: #626a76; margin: 8px 0; }
+.channel-performance .performance-chart-detail { min-height: 32px; font-size: 11px; padding-top: 8px; color: #454c56; }
+.performance-ranking { display: grid; gap: 10px; max-height: 245px; overflow: auto; margin-top: 17px; padding: 2px; }
+.performance-ranking button { text-align: start; color: #323943; background: transparent; border: 0; display: grid; grid-template-columns: 1fr auto; gap: 8px; font: inherit; font-size: 12px; padding: 3px; cursor: pointer; }
+.performance-ranking button i { grid-column: 1 / -1; height: 7px; border-radius: 10px; background: #f0f1f4; overflow: hidden; }
+.performance-ranking button b { display: block; height: 100%; border-radius: inherit; background: #828c9b; }
+.performance-ranking button:hover b, .performance-ranking button[aria-pressed=true] b { background: #d90000; }
+.performance-pipeline { margin-top: 16px; border: 1px solid #e1e3e7; border-radius: 13px; padding: 18px 20px; background: #fff; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.performance-pipeline > div:last-child { display: flex; gap: 20px; flex-wrap: wrap; }
+.performance-pipeline span { display: grid; gap: 5px; font-size: 11px; color: #535d6a; }
+.performance-pipeline strong { font-size: 22px; color: #323943; }
+.performance-pipeline .pipeline-approved strong { color: #246b4c; }
+.performance-pipeline .pipeline-pending-review strong { color: #ac150e; }
+.performance-method { border-top: 1px solid #e1e3e7; margin-top: 20px; padding-top: 15px; font-size: 12px; }
+.performance-method summary { cursor: pointer; color: #495260; font-weight: 600; }
+.performance-method p { max-width: 1000px; margin-top: 12px; }
+.performance-assumptions { display: flex; gap: 15px; flex-wrap: wrap; align-items: end; margin-top: 15px; }
+.performance-assumptions label { display: grid; gap: 6px; color: #454c56; }
+.performance-assumptions input { max-width: 120px; }
+.channel-performance .performance-empty { background: #f2f4f7; padding: 15px; border-radius: 9px; margin-bottom: 15px; }
+.channel-performance .performance-error { color: #a4130c; padding: 15px; }
+.channel-performance button:focus-visible, .channel-performance summary:focus-visible { outline: 2px solid #a90000; outline-offset: 3px; }
+@media(max-width: 1100px) { .performance-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } .performance-charts { grid-template-columns: 1fr; } }
+@media(max-width: 650px) { .channel-performance { padding: 16px; } .performance-heading, .performance-pipeline { align-items: start; flex-direction: column; } .performance-kpis article { padding: 12px; } .performance-kpis strong { font-size: 23px; } .performance-period { flex-wrap: wrap; gap: 8px; } .performance-daily { gap: 2px; } }

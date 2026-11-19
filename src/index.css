@@ -1,0 +1,115 @@
+:root {
+  --banner-stars: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27380%27%20height%3D%27320%27%20viewBox%3D%270%200%20380%20320%27%3E%3Cdefs%3E%3Cpath%20id%3D%27sparkle%27%20d%3D%27M0%20-48C6%20-19%2019%20-6%2048%200C19%206%206%2019%200%2048C-6%2019%20-19%206%20-48%200C-19%20-6%20-6%20-19%200%20-48Z%27%2F%3E%3C%2Fdefs%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23949ba6%27%20stroke-opacity%3D%27.18%27%20stroke-width%3D%275%27%20stroke-linejoin%3D%27round%27%3E%3Cuse%20href%3D%27%23sparkle%27%20transform%3D%27translate%28280%2088%29%27%2F%3E%3Cuse%20href%3D%27%23sparkle%27%20transform%3D%27translate%28155%20218%29%20scale%28.6%29%27%2F%3E%3Cuse%20href%3D%27%23sparkle%27%20transform%3D%27translate%28335%20265%29%20scale%28.38%29%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  /* Shared application palette. Brand artwork keeps its original red. */
+  --brand-red: #E00700;
+  --e-red: var(--action-burgundy);
+  --e-red-dark: var(--action-burgundy-hover);
+  --action-burgundy: #d90000;
+  --action-burgundy-hover: #b90000;
+  --ink: #20242b;
+  --navy: var(--ink);
+  --paper: #FFFFFF;
+  --mist: #FAFAFB;
+  --mist-2: #ECEBEE;
+  --graphite: #69717d;
+  --line: var(--theme-border);
+  --accent-border: var(--theme-border);
+  --accent-border-strong: #a6adb7;
+  --radius: 14px;
+  --theme-page: #f6f7f9;
+  --theme-surface: #fff;
+  --theme-subtle: #f5f6f8;
+  --theme-selected: #eef0f3;
+  --theme-border: #e1e3e8;
+  --theme-muted: var(--graphite);
+  --theme-heading: #20242b;
+  --theme-focus: #cf3838;
+  --theme-radius: 18px;
+  --theme-control-radius: 10px;
+  --theme-shadow: 0 5px 25px #20242b06;
+  --theme-dialog-shadow: 0 24px 80px #20242b35;
+  --theme-backdrop: #20242ba3;
+  --theme-banner: linear-gradient(115deg, #eef0f3, #e3e6eb 70%, #d9dde4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--theme-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+/* Shared wordmark layout; Harf typography is set in harf-brand.css. */
+.brand-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 700;
+  color: inherit;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.brand-wordmark-word {
+  letter-spacing: -0.01em;
+}
+
+.brand-wordmark-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--brand-red);
+  padding: 0;
+  border-radius: 0;
+  letter-spacing: -0.09em;
+  font-weight: 700;
+  transform: translateY(0.02em);
+}
+
+/* Shared text-sized transparent brand symbol. */
+.brand-wordmark .inline-brand-symbol { height: .85em; width: 1.14em; object-fit: contain; display: inline-block; flex-shrink: 0; margin-inline-start: .04em; }
+.brand-mark img { height: 1.2em; width: 1.6em; object-fit: contain; }
+
+/* Shared panel edges. Page layouts remain in their own stylesheets. */
+:is(.workspace-card, .workspace-profile-panel, .admin-panel, .approval-card,
+.copywriter-panel, .copywriter-card, .output-picker,
+.output-instruction-preview, .bulk-results > article, .guidelines-sidebar,
+.guidelines-content, .guidelines-editor,
+.panel, .card, .upload-box, .signin-card, .auth-card) {
+  border: 1px solid var(--accent-border) !important;
+}
+:is(.admin-shell, .copywriter-page, .guidelines-page, .workspace-screen, .signin-page) :is(input:not([type=checkbox]):not([type=radio]):not([type=range]), textarea, select) {
+  border: 1px solid var(--accent-border);
+}
+:focus-visible { outline: 2px solid var(--theme-focus); outline-offset: 3px; }
+
+:is(.signin-form-wrap, .copywriter-workspace, .copywriter-output, .copywriter-archive-dialog, .guidelines-file-list, .guidelines-document) { border: 1px solid var(--accent-border) !important; }
+:is(.signin-screen) :is(input:not([type=checkbox]):not([type=radio]):not([type=range]), textarea, select) { border: 1px solid var(--accent-border); }
+
+/* A near-white surface and quiet edges keep panels connected to the page. */
+:is(.copywriter-panel, .admin-panel, .approval-card, .workspace-card,
+.guidelines-content, .guidelines-editor, .guidelines-document) {
+  background-color: var(--theme-surface);
+  border-color: var(--theme-border) !important;
+  box-shadow: none;
+}

@@ -1,0 +1,37 @@
+.tutorial-dock button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; background: #fff; border: 1px solid #c2c3c5; color: #333436; border-radius: 8px; padding: 9px 12px; font-size: 11px; cursor: pointer; }
+.tutorial-highlight { outline: 3px solid #616264 !important; outline-offset: 5px; border-radius: 9px; }
+.tutorial-shade { position: fixed; inset: 0; z-index: 1000; background: #131416b8; backdrop-filter: blur(3px); pointer-events: none; }
+.tutorial-spotlight-frame { position: fixed; z-index: 1001; border: 2px solid #d9dadc; box-shadow: 0 0 0 2px #333436, 0 0 24px #fff3; border-radius: 10px; box-sizing: border-box; pointer-events: none; }
+.tutorial-dock { position: fixed; z-index: 1002; right: 20px; bottom: 20px; width: min(380px, calc(100vw - 40px)); max-height: calc(100dvh - 40px); box-sizing: border-box; background: #fff; border: 1px solid #b4b5b7; border-radius: 14px; padding: 18px; box-shadow: 0 8px 36px #16171960; color: #333436; display: flex; flex-direction: column; }
+.tutorial-dock > div:first-child { display: flex; align-items: center; gap: 8px; font-size: 11px; color: #6f7072; margin-bottom: 12px; }
+.tutorial-dock > div:first-child button { margin-left: auto; border: 0; padding: 2px; }
+.tutorial-dock > strong { font-size: 16px; line-height: 1.5; }
+.tutorial-dock p { font-size: 12px; line-height: 1.7; color: #6f7072; }
+.tutorial-dock-body { min-height: 0; max-height: 35dvh; overflow: auto; margin: 8px 0 16px; padding-right: 5px; }
+.tutorial-dock-body ol { padding-left: 20px; margin: 10px 0; }
+.tutorial-dock-body li { font-size: 12px; line-height: 1.8; margin-bottom: 10px; }
+.tutorial-dock-example { padding: 12px; border: 1px solid #dfe0e2; border-radius: 8px; background: #f5f6f8; white-space: pre-wrap; }
+.tutorial-dock footer { display: flex; justify-content: flex-end; gap: 8px; }
+.tutorial-dock .tutorial-navigation-note { font-size: 10px; margin: 0 0 10px; color: #6e6f71; }
+.tutorial-keyboard-help, .tutorial-dock .tutorial-keyboard-help { color: #67686a; font-size: 10px; line-height: 1.8; margin: 8px 0 12px; }
+.tutorial-keyboard-help kbd { display: inline-block; padding: 0 4px; margin-right: 3px; background: #f1f2f4; border: 1px solid #d8d9db; border-radius: 4px; font: inherit; color: #333436; }
+.tutorial-keyboard-help > span { font-size: 9px; }
+.tutorial-dock-body:focus-visible { outline: 2px solid #333436; outline-offset: 2px; border-radius: 4px; }
+.tutorial-dock button:focus-visible { outline: 2px solid #333436; outline-offset: 3px; }
+@media (max-width: 720px) { .tutorial-dock { bottom: 12px; right: 12px; width: min(380px, calc(100vw - 24px)); padding: 14px; max-height: 48dvh; } .tutorial-dock-body { max-height: 22dvh; } }
+
+.tutorial-dock footer > button:last-child { background: var(--action-burgundy); border-color: var(--action-burgundy); color: #fff; }
+.tutorial-dock button:disabled { opacity: .45; cursor: default; }
+.tutorial-dock { transition: top .2s ease, left .2s ease; animation: tutorial-arrive .18s ease-out; }
+.tutorial-highlight { outline-color: var(--action-burgundy) !important; }
+.tutorial-spotlight-frame { border-color: var(--action-burgundy); box-shadow: 0 0 0 3px #ffffffb3, 0 6px 24px #0002; }
+.tutorial-dock .tutorial-progress { height: 3px; flex: 0 0 3px; overflow: hidden; background: #eceef1; border-radius: 3px; margin: 0 0 14px; }
+.tutorial-progress > span { display: block; height: 100%; background: var(--action-burgundy); transition: width .22s ease; }
+.tutorial-group { color: var(--action-burgundy); font-size: 10px; font-weight: 600; margin-bottom: 4px; }
+.tutorial-dock-body { animation: tutorial-content .16s ease-out; overscroll-behavior: contain; scrollbar-gutter: stable; }
+.tutorial-dock .tutorial-availability { padding: 9px 11px; background: #f5f6f8; border-radius: 8px; font-size: 11px; }
+.tutorial-keyboard-help summary { cursor: pointer; color: #53585e; }
+.tutorial-keyboard-help p { margin: 6px 0 0; font-size: 10px; }
+@keyframes tutorial-arrive { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes tutorial-content { from { opacity: .35; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .tutorial-dock, .tutorial-dock-body, .tutorial-progress > span { animation: none; transition: none; } }

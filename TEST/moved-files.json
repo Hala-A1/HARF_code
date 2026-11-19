@@ -1,0 +1,290 @@
+[
+  {
+    "from": "backend\\test_access.py",
+    "to": "TEST\\backend\\test_access.py"
+  },
+  {
+    "from": "backend\\test_activity_limits.py",
+    "to": "TEST\\backend\\test_activity_limits.py"
+  },
+  {
+    "from": "backend\\test_approval.py",
+    "to": "TEST\\backend\\test_approval.py"
+  },
+  {
+    "from": "backend\\test_approval_queue.py",
+    "to": "TEST\\backend\\test_approval_queue.py"
+  },
+  {
+    "from": "backend\\test_approval_routing.py",
+    "to": "TEST\\backend\\test_approval_routing.py"
+  },
+  {
+    "from": "backend\\test_approval_scenarios.py",
+    "to": "TEST\\backend\\test_approval_scenarios.py"
+  },
+  {
+    "from": "backend\\test_archive_names.py",
+    "to": "TEST\\backend\\test_archive_names.py"
+  },
+  {
+    "from": "backend\\test_assessment_cache.py",
+    "to": "TEST\\backend\\test_assessment_cache.py"
+  },
+  {
+    "from": "backend\\test_b2b_pack.py",
+    "to": "TEST\\backend\\test_b2b_pack.py"
+  },
+  {
+    "from": "backend\\test_b2c_pack.py",
+    "to": "TEST\\backend\\test_b2c_pack.py"
+  },
+  {
+    "from": "backend\\test_backend_process.py",
+    "to": "TEST\\backend\\test_backend_process.py"
+  },
+  {
+    "from": "backend\\test_bulk_limits.py",
+    "to": "TEST\\backend\\test_bulk_limits.py"
+  },
+  {
+    "from": "backend\\test_channel_performance.py",
+    "to": "TEST\\backend\\test_channel_performance.py"
+  },
+  {
+    "from": "backend\\test_component_field_repair.py",
+    "to": "TEST\\backend\\test_component_field_repair.py"
+  },
+  {
+    "from": "backend\\test_component_records.py",
+    "to": "TEST\\backend\\test_component_records.py"
+  },
+  {
+    "from": "backend\\test_component_resilience.py",
+    "to": "TEST\\backend\\test_component_resilience.py"
+  },
+  {
+    "from": "backend\\test_component_set_review.py",
+    "to": "TEST\\backend\\test_component_set_review.py"
+  },
+  {
+    "from": "backend\\test_component_tov.py",
+    "to": "TEST\\backend\\test_component_tov.py"
+  },
+  {
+    "from": "backend\\test_copy_export.py",
+    "to": "TEST\\backend\\test_copy_export.py"
+  },
+  {
+    "from": "backend\\test_copywriter.py",
+    "to": "TEST\\backend\\test_copywriter.py"
+  },
+  {
+    "from": "backend\\test_cx_comms_pack.py",
+    "to": "TEST\\backend\\test_cx_comms_pack.py"
+  },
+  {
+    "from": "backend\\test_directory_auth.py",
+    "to": "TEST\\backend\\test_directory_auth.py"
+  },
+  {
+    "from": "backend\\test_document_text.py",
+    "to": "TEST\\backend\\test_document_text.py"
+  },
+  {
+    "from": "backend\\test_excel_layout.py",
+    "to": "TEST\\backend\\test_excel_layout.py"
+  },
+  {
+    "from": "backend\\test_export_admin_updates.py",
+    "to": "TEST\\backend\\test_export_admin_updates.py"
+  },
+  {
+    "from": "backend\\test_export_scores_branding.py",
+    "to": "TEST\\backend\\test_export_scores_branding.py"
+  },
+  {
+    "from": "backend\\test_feedback.py",
+    "to": "TEST\\backend\\test_feedback.py"
+  },
+  {
+    "from": "backend\\test_generation_context.py",
+    "to": "TEST\\backend\\test_generation_context.py"
+  },
+  {
+    "from": "backend\\test_generation_instruction_enhancer.py",
+    "to": "TEST\\backend\\test_generation_instruction_enhancer.py"
+  },
+  {
+    "from": "backend\\test_inference.py",
+    "to": "TEST\\backend\\test_inference.py"
+  },
+  {
+    "from": "backend\\test_input_tokens.py",
+    "to": "TEST\\backend\\test_input_tokens.py"
+  },
+  {
+    "from": "backend\\test_instruction_refiner.py",
+    "to": "TEST\\backend\\test_instruction_refiner.py"
+  },
+  {
+    "from": "backend\\test_instruction_routing.py",
+    "to": "TEST\\backend\\test_instruction_routing.py"
+  },
+  {
+    "from": "backend\\test_instruction_versions.py",
+    "to": "TEST\\backend\\test_instruction_versions.py"
+  },
+  {
+    "from": "backend\\test_language_review.py",
+    "to": "TEST\\backend\\test_language_review.py"
+  },
+  {
+    "from": "backend\\test_llm_rate_limits.py",
+    "to": "TEST\\backend\\test_llm_rate_limits.py"
+  },
+  {
+    "from": "backend\\test_model_catalog_sync.py",
+    "to": "TEST\\backend\\test_model_catalog_sync.py"
+  },
+  {
+    "from": "backend\\test_oracle_cutover.py",
+    "to": "TEST\\backend\\test_oracle_cutover.py"
+  },
+  {
+    "from": "backend\\test_oracle_genai_harf_names.py",
+    "to": "TEST\\backend\\test_oracle_genai_harf_names.py"
+  },
+  {
+    "from": "backend\\test_oracle_harf_names.py",
+    "to": "TEST\\backend\\test_oracle_harf_names.py"
+  },
+  {
+    "from": "backend\\test_oracle_migration.py",
+    "to": "TEST\\backend\\test_oracle_migration.py"
+  },
+  {
+    "from": "backend\\test_oracle_runtime.py",
+    "to": "TEST\\backend\\test_oracle_runtime.py"
+  },
+  {
+    "from": "backend\\test_platform_policy.py",
+    "to": "TEST\\backend\\test_platform_policy.py"
+  },
+  {
+    "from": "backend\\test_platform_privacy.py",
+    "to": "TEST\\backend\\test_platform_privacy.py"
+  },
+  {
+    "from": "backend\\test_quality_analysis.py",
+    "to": "TEST\\backend\\test_quality_analysis.py"
+  },
+  {
+    "from": "backend\\test_retrieval_preview_parity.py",
+    "to": "TEST\\backend\\test_retrieval_preview_parity.py"
+  },
+  {
+    "from": "backend\\test_reviewer_privacy.py",
+    "to": "TEST\\backend\\test_reviewer_privacy.py"
+  },
+  {
+    "from": "backend\\test_scan_ocr.py",
+    "to": "TEST\\backend\\test_scan_ocr.py"
+  },
+  {
+    "from": "backend\\test_security_pack.py",
+    "to": "TEST\\backend\\test_security_pack.py"
+  },
+  {
+    "from": "backend\\test_spreadsheet_import.py",
+    "to": "TEST\\backend\\test_spreadsheet_import.py"
+  },
+  {
+    "from": "backend\\test_storage_errors.py",
+    "to": "TEST\\backend\\test_storage_errors.py"
+  },
+  {
+    "from": "backend\\test_structure_retrieval.py",
+    "to": "TEST\\backend\\test_structure_retrieval.py"
+  },
+  {
+    "from": "backend\\test_terminology_index.py",
+    "to": "TEST\\backend\\test_terminology_index.py"
+  },
+  {
+    "from": "backend\\test_text_stream.py",
+    "to": "TEST\\backend\\test_text_stream.py"
+  },
+  {
+    "from": "backend\\test_tov_routes.py",
+    "to": "TEST\\backend\\test_tov_routes.py"
+  },
+  {
+    "from": "backend\\test_user_removal.py",
+    "to": "TEST\\backend\\test_user_removal.py"
+  },
+  {
+    "from": "backend\\test_workspace_removal.py",
+    "to": "TEST\\backend\\test_workspace_removal.py"
+  },
+  {
+    "from": "src\\api-response.test.js",
+    "to": "TEST\\frontend\\api-response.test.js"
+  },
+  {
+    "from": "src\\approval-display.test.js",
+    "to": "TEST\\frontend\\approval-display.test.js"
+  },
+  {
+    "from": "src\\auth.test.js",
+    "to": "TEST\\frontend\\auth.test.js"
+  },
+  {
+    "from": "src\\channel-names.test.js",
+    "to": "TEST\\frontend\\channel-names.test.js"
+  },
+  {
+    "from": "src\\export-metadata.test.js",
+    "to": "TEST\\frontend\\export-metadata.test.js"
+  },
+  {
+    "from": "src\\export-scores.test.js",
+    "to": "TEST\\frontend\\export-scores.test.js"
+  },
+  {
+    "from": "src\\export-session.test.js",
+    "to": "TEST\\frontend\\export-session.test.js"
+  },
+  {
+    "from": "src\\inference-context.test.js",
+    "to": "TEST\\frontend\\inference-context.test.js"
+  },
+  {
+    "from": "src\\markdown.test.js",
+    "to": "TEST\\frontend\\markdown.test.js"
+  },
+  {
+    "from": "src\\onboarding-keyboard.test.js",
+    "to": "TEST\\frontend\\onboarding-keyboard.test.js"
+  },
+  {
+    "from": "src\\onboarding-steps.test.js",
+    "to": "TEST\\frontend\\onboarding-steps.test.js"
+  },
+  {
+    "from": "src\\output-layout.test.js",
+    "to": "TEST\\frontend\\output-layout.test.js"
+  },
+  {
+    "from": "src\\request-limit.test.js",
+    "to": "TEST\\frontend\\request-limit.test.js"
+  },
+  {
+    "from": "src\\text-stream.test.js",
+    "to": "TEST\\frontend\\text-stream.test.js"
+  },
+  {
+    "from": "src\\tutorial-layout.test.js",
+    "to": "TEST\\frontend\\tutorial-layout.test.js"
+  }
+]

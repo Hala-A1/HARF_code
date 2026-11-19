@@ -1,0 +1,24 @@
+.platform-overview { color: #273444; }
+.platform-overview > .channel-performance { margin: 24px 0; }
+.platform-metadata-refresh { display: inline-flex; padding: 9px; color: #a90000; background: white; border: 1px solid #d8dfe7; border-radius: 8px; cursor: pointer; }
+.platform-summary-table caption { padding: 14px; text-align: left; font-weight: 600; color: #344255; }
+.platform-overview > header, .platform-summary-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 20px; }
+.platform-overview h2 { font-size: 23px; margin: 0 0 7px; }.platform-overview h3 { font-size: 16px; margin: 0; }
+.platform-overview p { color: #596577; font-size: 12px; line-height: 1.65; }
+.platform-summary-controls { display: flex; align-items: end; gap: 10px; }
+.platform-overview label { display: grid; gap: 6px; font-size: 12px; color: #4c5869; }
+.platform-overview select { padding: 9px 12px; background: white; color: #293647; border: 1px solid #cdd5df; border-radius: 8px; font: inherit; }
+.platform-summary-controls button { background: white; color: #a90000; border: 1px solid #d8dfe7; border-radius: 8px; padding: 9px; cursor: pointer; }
+.platform-privacy-note { display: flex; align-items: center; gap: 10px; padding: 14px 17px; border: 1px solid #dee3ea; border-inline-start: 3px solid #b10000; border-radius: 10px; background: white; font-size: 12px; line-height: 1.6; }.platform-privacy-note svg { flex-shrink: 0; color: #b10000; }
+.platform-summary-kpis { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; margin: 20px 0 26px; }
+.platform-summary-kpis article { display: grid; gap: 13px; padding: 22px; border: 1px solid #dfe4eb; border-radius: 13px; background: white; min-width: 0; }
+.platform-summary-kpis svg { color: #b10000; }.platform-summary-kpis span { font-size: 12px; color: #5a6677; }.platform-summary-kpis strong { font-size: 26px; overflow-wrap: anywhere; }
+.platform-user-chart { padding: 15px 20px; border: 1px solid #dfe4eb; border-radius: 13px; background: white; margin-bottom: 22px; }
+.platform-user-chart button { display: grid; grid-template-columns: minmax(150px,1fr) 3fr 60px; gap: 15px; align-items: center; width: 100%; padding: 13px 0; border: 0; background: none; color: #344255; text-align: left; cursor: pointer; font: inherit; font-size: 12px; }
+.platform-user-chart i { display: block; background: #f0f2f5; border-radius: 3px; height: 12px; overflow: hidden; }.platform-user-chart b { display: block; height: 100%; background: #b80000; border-radius: 3px; }.platform-user-chart strong { text-align: right; }
+.platform-summary-table { overflow-x: auto; background: white; border: 1px solid #dfe4eb; border-radius: 12px; }
+.platform-summary-table table { width: 100%; border-collapse: collapse; font-size: 12px; }.platform-summary-table th,.platform-summary-table td { padding: 15px; border-bottom: 1px solid #e6eaf0; text-align: left; vertical-align: top; }.platform-summary-table thead { background: #f0f2f5; color: #505f73; font-size: 11px; }.platform-summary-table td small { display: block; margin-top: 8px; color: #657184; }.platform-summary-table details summary { color: #a90000; cursor: pointer; }.platform-summary-table dl { min-width: 150px; }.platform-summary-table dl div { display: flex; gap: 12px; justify-content: space-between; padding: 4px 0; }.platform-summary-table dd { margin: 0; }
+.platform-summary-method { margin-top: 20px; color: #5a6779; font-size: 12px; }.platform-summary-method summary { cursor: pointer; font-weight: 600; }.platform-summary-error { color: #a00000 !important; }
+.platform-overview :focus-visible { outline: 2px solid #b00000; outline-offset: 3px; }
+@media(max-width:1000px) { .platform-summary-kpis { grid-template-columns: 1fr 1fr; } }
+@media(max-width:600px) { .platform-overview > header { align-items: start; flex-direction: column; }.platform-summary-kpis article { padding: 15px; }.platform-summary-kpis strong { font-size: 22px; }.platform-user-chart { padding: 12px; }.platform-user-chart button { grid-template-columns: 110px 1fr 35px; gap: 9px; } }

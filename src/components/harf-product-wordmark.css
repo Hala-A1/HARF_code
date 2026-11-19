@@ -1,0 +1,18 @@
+.harf-product-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  white-space: nowrap;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: 1;
+}
+.brand-mark .harf-product-wordmark { font-size: 20px; font-weight: 700; color: inherit; letter-spacing: -.02em; }
+.harf-product-wordmark > span, .brand-mark .harf-product-wordmark > span { font: inherit; color: inherit; letter-spacing: inherit; }
+.harf-product-wordmark > img, .brand-mark .harf-product-wordmark > img {
+  width: .95em;
+  height: .72em;
+  margin-inline-start: .02em;
+  object-fit: contain;
+  flex-shrink: 0;
+}

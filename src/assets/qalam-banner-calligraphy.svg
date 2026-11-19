@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" fill="none">
+  <defs>
+    <linearGradient id="paper" x1="680" y1="50" x2="970" y2="420" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset=".6" stop-color="#faf9f7"/><stop offset="1" stop-color="#dadddf"/></linearGradient>
+    <linearGradient id="ink" x1="1010" y1="40" x2="1180" y2="440" gradientUnits="userSpaceOnUse"><stop stop-color="#e00000"/><stop offset="1" stop-color="#b80c18"/></linearGradient>
+    <filter id="relief" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="-7" dy="9" stdDeviation="9" flood-color="#1b2737" flood-opacity=".12"/></filter>
+    <linearGradient id="fade"><stop offset=".2" stop-color="#fff" stop-opacity="0"/><stop offset=".65" stop-color="#fff"/></linearGradient>
+    <mask id="right"><path fill="url(#fade)" d="M0 0h1200v480H0z"/></mask>
+  </defs>
+  <g mask="url(#right)">
+    <g filter="url(#relief)" fill="url(#paper)">
+      <path d="M531 522c68-181 197-235 334-229 129 6 197-83 252-214-9 164-74 264-223 275-143 10-246 47-363 168Z"/>
+      <path d="M625 27c61 73 133 74 231 26 123-61 203-22 227 40-58-42-122-23-203 21C765 177 666 133 625 27Z"/>
+      <path d="M695 508c52-108 146-151 259-143 134 10 216-45 298-167-35 160-126 229-258 213-130-15-209 9-299 97Z"/>
+    </g>
+    <path d="M922 516c130-82 209-194 222-330 7-73 38-127 101-163-32 62-41 124-41 191 1 149-97 253-282 302Z" fill="url(#ink)" opacity=".8"/>
+    <path d="M764 476c82-49 154-47 227-37 70 10 127-8 200-60-72 84-133 102-209 87-78-15-140-16-218 10Z" fill="#e00000" opacity=".12"/>
+    <g fill="#e00000" opacity=".75"><path d="m1084 111 17 17-17 17-17-17z"/><path d="m1117 111 17 17-17 17-17-17z"/></g>
+  </g>
+</svg>

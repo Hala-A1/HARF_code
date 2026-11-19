@@ -1,0 +1,7 @@
+# Harf حرف
+
+Primary product headers use **Harf حرف**, without a slash, in brand red `#e00700`. Both names remain live text. Latin lettering uses Manrope at weight 800; Arabic uses Aref Ruqaa Bold with correct right-to-left shaping and no letter spacing. Fonts are self-hosted under `public/fonts/harf/` with the original license notices. Normal application text retains its existing typefaces.
+
+`BrandLogo` is the shared wordmark. Pass `compact` for **Harf** alone in narrow controls, administration navigation and technical product labels. `HarfLogo` delegates to it so every existing header uses the same branding; `HarfIcon` renders the writing icon. Product icons retain the original document, pen, e and star artwork without added H or ح initials. The standalone large ح has been removed. The browser favicon uses H for small-size clarity. The etisalat corporate logo remains separate, including on content exports.
+
+Browser titles and API display metadata use **Harf**. Application table names now start with `HARF_`, with old `GENAI_RW_` compatibility views and unchanged `RW_` public views. Stored workspace IDs, routes, password hashing, sign-in configuration, event names and browser storage keys remain stable for compatibility. Renaming these persisted identifiers could invalidate existing access, feedback fingerprints or sessions, so they are intentionally retained. Previously exported presentations/documents remain historical artifacts and are not rewritten automatically.

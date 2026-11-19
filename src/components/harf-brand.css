@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Harf Manrope';
+  src: url('/fonts/harf/Manrope-Variable.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+:root .harf-wordmark.harf-wordmark {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  gap: .32em;
+  color: #e00000;
+  font-size: inherit;
+  line-height: 1.2;
+  white-space: nowrap;
+  isolation: isolate;
+}
+:root .harf-wordmark.harf-wordmark .harf-wordmark__latin {
+  font-family: 'Harf Manrope', Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: -.055em;
+  line-height: 1.2;
+  color: #e00000;
+}
+:root .harf-wordmark .harf-wordmark__symbol {
+  width: 1.02em;
+  height: 1.52em;
+  flex: 0 0 auto;
+}
+:root .harf-writing-icon {
+  display: block;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+:root .signin-header .brand-mark .harf-wordmark {
+  flex-direction: column;
+  gap: 18px;
+  font-size: clamp(44px, 4.7vw, 66px);
+}
+:root .signin-header .harf-wordmark .harf-wordmark__symbol { height: 154px; width: 103px; }
+:root .admin-brand .harf-wordmark { font-size: 28px; }
+@media (max-width: 600px) {
+  :root .signin-header .brand-mark .harf-wordmark { font-size: 43px; gap: 12px; }
+  :root .signin-header .harf-wordmark .harf-wordmark__symbol { height: 116px; width: 78px; }
+}

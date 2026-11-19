@@ -1,0 +1,36 @@
+.instruction-version-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 9px; }
+.instruction-version-primary, .instruction-version-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 10px 14px; border: 1px solid #c2c3c5; border-radius: 8px; font-size: 12px; font-weight: 600; cursor: pointer; }
+.instruction-version-primary { background: var(--action-burgundy); color: #fff; border-color: var(--action-burgundy); }
+.instruction-version-secondary { background: #fff; color: var(--action-burgundy); }
+.instruction-version-primary:hover { background: var(--action-burgundy-hover); }
+.instruction-version-secondary:hover { background: #f4f5f7; }
+.instruction-version-actions button:disabled, .instruction-modal button:disabled { opacity: .5; cursor: not-allowed; }
+.instruction-current-version { font-size: 11px; color: #68696b; }
+.instruction-modal { position: fixed; inset: 0; margin: auto; width: min(520px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 48px); overflow: auto; padding: 25px; border: 1px solid #b4b5b7; border-radius: 15px; background: #fff; color: #28292b; box-shadow: 0 24px 80px #13141645; }
+.instruction-modal::backdrop { background: #17181ab3; }
+.instruction-modal-wide { width: min(1120px, calc(100vw - 32px)); }
+.instruction-modal-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.instruction-modal-heading h2 { font-size: 19px; margin: 0; line-height: 1.4; }
+.instruction-modal-heading > button { display: inline-flex; padding: 7px; background: transparent; border: 0; color: #666769; border-radius: 7px; }
+.instruction-modal p { font-size: 12px; line-height: 1.8; }
+.instruction-modal-subtitle { color: #6a6b6d; overflow-wrap: anywhere; }
+.instruction-change-note { display: grid; gap: 8px; margin-top: 20px; font-size: 12px; font-weight: 600; }
+.instruction-change-note textarea { width: 100%; min-height: 90px; max-height: 180px; resize: vertical; padding: 12px; border: 1px solid #c2c3c5; border-radius: 8px; font-size: 13px; line-height: 1.6; }
+.instruction-confirm-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 10px; margin-top: 23px; }
+.instruction-version-error { color: #9d233c; padding: 10px 12px; background: #fff2f4; border-radius: 7px; }
+.instruction-history-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 18px; }
+.instruction-history-list { overflow-y: auto; max-height: 59dvh; border: 1px solid #e0e1e3; border-radius: 9px; }
+.instruction-history-list > button { display: grid; width: 100%; gap: 7px; text-align: left; padding: 15px; background: #fff; border: 0; border-bottom: 1px solid #e0e1e3; color: #343537; }
+.instruction-history-list > button.selected { background: #eeeff1; box-shadow: inset 3px 0 #38393b; }
+.instruction-history-list strong { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 12px; }
+.instruction-history-list strong > span { font-size: 9px; border-radius: 5px; background: #d9dadc; padding: 4px 6px; }
+.instruction-history-list small { color: #707173; font-size: 10px; line-height: 1.5; overflow-wrap: anywhere; }
+.instruction-version-note { white-space: pre-wrap; }
+.instruction-version-preview { min-width: 0; }
+.instruction-version-meta { display: grid; gap: 8px; font-size: 11px; color: #707173; overflow-wrap: anywhere; }
+.instruction-version-meta > strong { font-size: 14px; color: #343537; }
+.instruction-version-preview pre { height: 35dvh; min-height: 140px; max-height: 400px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; padding: 16px; border: 1px solid #dedfe1; border-radius: 8px; background: #fafbfd; font: 11px/1.8 monospace; unicode-bidi: plaintext; }
+.instruction-history-footer { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.instruction-history-footer p { margin: 0; color: #707173; font-size: 10px; }
+.instruction-history-footer button { flex-shrink: 0; }
+@media (max-width: 700px) { .instruction-history-layout { grid-template-columns: 1fr; } .instruction-history-list { max-height: 160px; } .instruction-history-footer { align-items: flex-start; flex-direction: column; } .instruction-modal { padding: 19px; } .instruction-version-actions { justify-content: flex-start; } }

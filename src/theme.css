@@ -1,0 +1,276 @@
+/* Application chrome only: never restyle exported documents or semantic statuses. */
+html {
+  --app-scale: .9;
+  --app-viewport-height: calc(100vh / var(--app-scale));
+  zoom: var(--app-scale);
+}
+:is(.signin-screen, .signin-header, .signin-visual, .workspace-screen,
+    .copywriter-page, .admin-shell, .guidelines-page) {
+  min-height: var(--app-viewport-height);
+}
+.admin-shell .admin-sidebar { height: var(--app-viewport-height); }
+@media (max-width: 860px) {
+  .signin-screen :is(.signin-header, .signin-visual) { min-height: 300px; }
+}
+@media (max-width: 760px) {
+  .admin-shell .admin-sidebar { height: auto; }
+}
+@media print {
+  html { --app-scale: 1; zoom: 1; }
+}
+
+.signin-screen .signin-form-wrap,
+.workspace-screen.harf-welcome,
+.guidelines-page.guidelines-page,
+.admin-shell.admin-shell,
+.copywriter-page.copywriter-page {
+  background-color: var(--theme-page);
+  color: var(--ink);
+}
+
+.signin-screen .signin-header,
+.harf-welcome .welcome-header,
+.guidelines-page .guidelines-header {
+  background-image: var(--banner-stars), var(--theme-banner);
+  background-position: right center, center;
+  background-size: 380px 320px, cover;
+  background-repeat: no-repeat;
+}
+
+.signin-screen .signin-form-wrap { border: 0 !important; }
+.signin-screen .signin-form,
+.harf-welcome .welcome-introduction,
+.guidelines-page .guidelines-files,
+.guidelines-page .guidelines-document,
+.personal-activity .activity-workspace {
+  background: var(--theme-surface);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--theme-radius);
+  box-shadow: var(--theme-shadow);
+}
+.guidelines-page .guidelines-content {
+  background: transparent;
+  border: 0 !important;
+}
+.guidelines-page .guidelines-files > button.selected {
+  background: var(--theme-selected);
+  color: var(--action-burgundy);
+  box-shadow: inset 3px 0 var(--action-burgundy);
+}
+.guidelines-page .guidelines-files > button:hover:not(.selected) {
+  background: var(--theme-subtle);
+}
+
+/* The same controls in forms, reviewers, admin tools and portal dialogs. */
+:is(.signin-screen, .workspace-screen, .copywriter-page, .admin-shell,
+    .guidelines-page, .personal-activity, .instruction-modal, .tutorial-dock)
+  :is(input:not([type=checkbox]):not([type=radio]):not([type=range]), textarea, select) {
+  border-color: var(--theme-border);
+  border-radius: var(--theme-control-radius);
+  color: var(--ink);
+  caret-color: var(--action-burgundy);
+}
+:is(.signin-screen, .workspace-screen, .copywriter-page, .admin-shell,
+    .guidelines-page, .personal-activity, .instruction-modal, .tutorial-dock)
+  :is(input, textarea, select, [contenteditable=true]):focus-visible {
+  outline: 2px solid var(--theme-focus);
+  outline-offset: 2px;
+}
+input[type=checkbox], input[type=radio] { accent-color: var(--action-burgundy); }
+button:disabled { cursor: not-allowed; }
+
+:is(.signin-form .btn-primary, .copywriter-page .btn-primary, .welcome-start-actions .welcome-primary,
+    .instruction-refiner .instruction-refiner-generate,
+    .feedback-admin-review button, .instruction-modal .instruction-version-primary) {
+  background: var(--action-burgundy);
+  border-color: var(--action-burgundy);
+  border-radius: var(--theme-control-radius);
+  color: #fff;
+}
+:is(.signin-form .btn-primary, .copywriter-page .btn-primary, .welcome-start-actions .welcome-primary,
+    .instruction-refiner .instruction-refiner-generate,
+    .feedback-admin-review button, .instruction-modal .instruction-version-primary):hover:not(:disabled) {
+  background: var(--action-burgundy-hover);
+}
+.guidelines-page .guidelines-action {
+  background: var(--theme-surface);
+  border-color: var(--theme-border);
+  color: var(--action-burgundy);
+}
+.guidelines-page .guidelines-header .guidelines-action.secondary {
+  background: #ffffff12;
+  border-color: #ffffff50;
+  color: #fff;
+}
+.guidelines-page .guidelines-action:hover:not(:disabled) { background: var(--theme-selected); }
+.guidelines-page .guidelines-header .guidelines-action.secondary:hover:not(:disabled) { background: #ffffff25; }
+
+:is(.activity-workspace, .feedback-workspace, .request-limits) button,
+.instruction-version-actions button,
+.instruction-refiner button { border-radius: var(--theme-control-radius); }
+.activity-grid th, .tracker-copy-table th {
+  background: var(--theme-subtle);
+  color: var(--theme-heading);
+}
+.instruction-scroll.instruction-scroll { border-color: var(--theme-border); box-shadow: var(--theme-shadow); }
+.instruction-scroll button { background: var(--theme-subtle); color: var(--action-burgundy); }
+.instruction-scroll button:hover { background: var(--theme-selected); color: var(--action-burgundy-hover); }
+.instruction-scroll button:focus-visible { outline-color: var(--theme-focus); }
+.instruction-modal.instruction-modal,
+.copywriter-archive-dialog.copywriter-archive-dialog,
+.workspace-profile-panel.workspace-profile-panel,
+.tutorial-dock.tutorial-dock {
+  background: var(--theme-surface);
+  color: var(--ink);
+  border-color: var(--theme-border);
+  border-radius: var(--theme-radius);
+  box-shadow: var(--theme-dialog-shadow);
+}
+.instruction-modal::backdrop,
+.copywriter-archive-dialog::backdrop,
+.workspace-profile-panel::backdrop { background: var(--theme-backdrop); }
+
+/* White and cool grey surfaces with the reference design's red accents. */
+.signin-screen .signin-header,
+.harf-welcome .welcome-header,
+.guidelines-page .guidelines-header,
+.copywriter-page .copywriter-banner {
+  background-image: var(--banner-stars), var(--theme-banner);
+  background-position: right center, center;
+  background-size: 380px 320px, cover;
+  color: var(--ink);
+}
+:is(.signin-header, .welcome-header, .guidelines-header) .brand-mark,
+:is(.signin-header, .welcome-header, .guidelines-header) .brand-mark span,
+.copywriter-banner .copywriter-brand-name { color: var(--action-burgundy); }
+.harf-welcome .welcome-banner-copy h1 { color: #3f434a; }
+.signin-header .signin-copy h1 { color: #3f434a; }
+.signin-header :is(.signin-copy p, .signin-foot),
+.harf-welcome .welcome-banner-copy > p,
+.guidelines-header .guidelines-header-copy > p,
+.copywriter-banner :is(.copywriter-brand-copy small, .copywriter-banner-copy) {
+  color: var(--graphite);
+}
+:is(.signin-header, .welcome-header, .guidelines-header, .copywriter-banner)
+  :is(.workspace-admin-button, .workspace-profile-button, .welcome-signout,
+      .admin-guide-btn, .guidelines-action.secondary) {
+  background: #fff;
+  border-color: var(--theme-border);
+  color: var(--ink);
+}
+.admin-shell .admin-sidebar {
+  background: #fff;
+  color: var(--ink);
+  border-inline-end: 1px solid var(--theme-border);
+  box-shadow: none;
+}
+.admin-sidebar .admin-brand,
+.admin-sidebar .admin-brand .harf-product-wordmark { color: var(--action-burgundy); }
+.admin-sidebar :is(nav button, .admin-account, .admin-channel-picker label) { color: var(--graphite); }
+.admin-sidebar nav button:hover { background: var(--theme-subtle); }
+.admin-sidebar nav button.active {
+  background: var(--theme-selected);
+  color: var(--action-burgundy);
+  box-shadow: inset 3px 0 var(--action-burgundy);
+}
+.admin-sidebar nav em,
+.admin-sidebar .admin-account > span {
+  background: var(--theme-selected);
+  color: var(--ink);
+}
+.admin-sidebar .admin-channel-picker {
+  background: var(--theme-subtle);
+  border-color: var(--theme-border);
+}
+.admin-sidebar .admin-channel-picker select { background: #fff; color: var(--ink); }
+.copywriter-page .output-choice[aria-pressed=true] {
+  border-color: var(--action-burgundy);
+  background: var(--theme-selected);
+  box-shadow: inset 3px 0 var(--action-burgundy);
+}
+.copywriter-page .brief-dropzone,
+.copywriter-page .bulk-results > article > header { background: var(--theme-subtle); }
+
+/* Small red accents distinguish actions and headings without tinting panels. */
+.copywriter-page .copywriter-banner,
+.guidelines-page .guidelines-header { border-inline-start: 3px solid var(--action-burgundy); }
+.copywriter-panel-head h3::before { content: ''; width: 4px; height: 17px; border-radius: 3px; background: var(--action-burgundy); flex-shrink: 0; }
+.copywriter-page .copywriter-panel-head h3 { display: flex; align-items: center; gap: 9px; }
+.guidelines-page .guidelines-header .harf-product-wordmark,
+.guidelines-page .guidelines-header .harf-product-wordmark > span { color: var(--action-burgundy); }
+.guidelines-page .guidelines-header-copy .kicker { color: var(--graphite); }
+.signin-header :is(.signin-copy p, .signin-foot),
+.harf-welcome .welcome-banner-copy > p,
+.guidelines-page .guidelines-header-copy :is(p, .kicker),
+.copywriter-banner :is(.copywriter-brand-copy small, .copywriter-banner-copy) { color: #4f5865; }
+.guideline-review > header > div > strong { border-inline-start: 2px solid var(--action-burgundy); padding-inline-start: 8px; }
+.guideline-review > header button { color: var(--action-burgundy); border-color: var(--theme-border); }
+.copywriter-page :is(.copywriter-copy-button, .copywriter-downloads button):hover:not(:disabled) { border-color: var(--action-burgundy); color: var(--action-burgundy); }
+.bilingual-column-heading { border-bottom-color: var(--theme-border); }
+.bilingual-column-heading > span { border-bottom: 2px solid var(--action-burgundy); padding-bottom: 5px; }
+
+/* Keep administration controls clear against neutral surfaces. */
+.admin-shell .admin-topbar { border-bottom: 2px solid var(--action-burgundy); padding-bottom: 16px; }
+.admin-shell .admin-eyebrow,
+.admin-shell .admin-role-badge { color: #4f5865; }
+.admin-shell .admin-sidebar nav button { color: #4f5865; }
+.admin-shell .admin-sidebar nav button.active { color: var(--action-burgundy); }
+.admin-shell .admin-sidebar :is(.admin-brand small, .admin-account small, .admin-back) { color: #4f5865; }
+.admin-shell .admin-sidebar .admin-back:hover { color: var(--action-burgundy); }
+.admin-shell :is(.panel-heading h2, .editor-heading h2) { color: var(--ink); }
+.admin-shell .admin-stats article > span { background: var(--theme-subtle); color: var(--action-burgundy); }
+.admin-shell .admin-stats strong { color: var(--ink); }
+.activity-heading h2 { border-inline-start: 3px solid var(--action-burgundy); padding-inline-start: 10px; color: var(--ink); }
+.activity-workspace :is(button, .activity-columns summary) { color: #4f5865; }
+.activity-workspace button:hover:not(:disabled) { color: var(--action-burgundy); border-color: var(--action-burgundy); }
+.activity-grid th { background: #eceff3; color: #343c48; border-top: 2px solid var(--action-burgundy); }
+.activity-grid td { color: var(--ink); }
+.activity-cell-details summary svg { color: var(--action-burgundy); }
+.activity-toolbar label { color: #343c48; }
+.activity-pagination button:not(:disabled) { color: var(--action-burgundy); }
+.harf-welcome .welcome-header .welcome-signout,
+.harf-welcome .welcome-header .welcome-signout:hover { background: transparent; border: 0; box-shadow: none; color: var(--ink); }
+.harf-welcome .welcome-header .welcome-signout:hover { color: var(--action-burgundy); }
+
+/* Ribbon artwork belongs on the main banners, with white content panels. */
+:root {
+  --harf-banner-grey: #eceef1;
+  --harf-banner-artwork: url('./assets/harf-banner-calligraphy.svg');
+}
+.copywriter-page.copywriter-page .copywriter-banner,
+.signin-screen .signin-header,
+.harf-welcome .welcome-header,
+.guidelines-page.guidelines-page .guidelines-header {
+  background-color: var(--harf-banner-grey);
+  background-image: var(--harf-banner-artwork);
+  background-blend-mode: normal;
+  background-position: right center;
+  background-size: auto 145%;
+  background-repeat: no-repeat;
+}
+.signin-screen .signin-header { background-image: none; }
+.signin-screen .signin-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--harf-banner-artwork) right bottom / auto 75% no-repeat;
+  opacity: .68;
+  mask-image: linear-gradient(to bottom, transparent 28%, #000 74%);
+}
+.copywriter-page .copywriter-brand-wrap { gap: 0; }
+:root .admin-brand .harf-wordmark.harf-wordmark .harf-wordmark__latin { color: #e00000; }
+.admin-brand .harf-symbol { filter: none; }
+:root .guidelines-header .brand-mark .harf-wordmark { font-size: 27px; }
+@media (max-width: 700px) {
+  .copywriter-page.copywriter-page .copywriter-banner,
+  .harf-welcome .welcome-header,
+  .guidelines-page.guidelines-page .guidelines-header { background-size: auto 115%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(.signin-screen, .workspace-screen, .copywriter-page, .admin-shell, .guidelines-page) * {
+    scroll-behavior: auto;
+    transition-duration: 0s;
+  }
+}

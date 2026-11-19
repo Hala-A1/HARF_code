@@ -1,0 +1,5 @@
+.instruction-scroll { position: fixed; right: 22px; bottom: 24px; z-index: 30; display: flex; gap: 6px; padding: 6px; border: 1px solid #dadbdd; border-radius: 12px; background: #fff; box-shadow: 0 4px 18px #0002; }
+.instruction-scroll button { display: inline-flex; align-items: center; gap: 6px; padding: 10px 12px; border: 0; border-radius: 7px; background: #f3f4f6; color: #242527; font: inherit; font-size: 13px; cursor: pointer; }
+.instruction-scroll button:hover { background: #fff0ef; color: #3e3f41; }
+.instruction-scroll button:focus-visible { outline: 2px solid #3e3f41; outline-offset: 2px; }
+@media (max-width: 600px) { .instruction-scroll { right: 12px; bottom: 12px; } }
